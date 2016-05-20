@@ -1,0 +1,10 @@
+minecraft:
+  build: .
+  container_name: minecraft
+  hostname: minecraft
+  ports:
+    - "25565:25565"
+    - "9080:8080"
+  tty: true
+  stdin_open: true
+  restart: always
