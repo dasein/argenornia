@@ -8,3 +8,15 @@ minecraft:
   tty: true
   stdin_open: true
   restart: always
+  volumes:
+    - ./cuberite/data:/data
+
+pocketmine:
+  build: ./pocketmine
+  container_name: pocketmine
+  hostname: pocketmine
+  ports:
+    - "19132:19132/udp"
+  restart: always
+  volumes:
+    - ./pocketmine/data:/pocketmine/worlds
